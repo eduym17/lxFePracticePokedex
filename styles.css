@@ -25,3 +25,7 @@ body {
   background: var(--color-darkgray);
   color: var(--color-white);
 }
+
+.pokeImg {
+  width: 150px;
+}
