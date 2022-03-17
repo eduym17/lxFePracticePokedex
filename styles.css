@@ -21,6 +21,21 @@
   --color-gray800: #282838;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: large;
+  padding: 25px 0;
+}
+
+h1:hover {
+  color: #33FDD8;
+}
+
 body {
   background: var(--color-darkgray);
   color: var(--color-white);
@@ -31,10 +46,56 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+}
+
+p {
+  padding: 15px 0 25px 0;
+}
+
+label {
+  padding: 10px;
+  font-weight: 400;
+}
+
+input {
+  border-radius: 50px;
+  text-align: center;
+  border: none;
+  padding: 3px;
+}
+
+input:hover {
+  background: var(--color-aqua);
+  color: var(--color-darkgray);
+}
+
+button {
+  background: var(--color-violet);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  color: var(--color-white);
+}
+
+button:hover {
+  background: var(--color-purple);
+  font-weight: 600;
 }
 
 .pokeImg {
   width: 200px;
+}
+
+.pokeApi {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+.pokeApi:hover {
+  font-weight: 400;
 }
 
 li {

@@ -44,6 +44,7 @@ const fetchPokemon = () => {
     const eraseInfo = document.getElementById('submit');
     eraseInfo.addEventListener('click', () => {
       document.querySelector('.data').innerHTML = "";
+      pokeImage("./assets/images/pokeball.png");
     })
     
   });
