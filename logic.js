@@ -12,6 +12,8 @@ const fetchPokemon = () => {
 
   }).then((data) => {
 
+    console.log(data);
+
     const li = document.createElement('li');
     li.classList.add('.pokeInfo');
 
@@ -21,6 +23,10 @@ const fetchPokemon = () => {
     const pokeNameApi = document.createElement('span');
     pokeNameApi.classList.add('pokeNameApi', 'pokeApi');
     pokeNameApi.innerText = 'Nombre: ' + data.name;
+
+    const pokeID = document.createElement('span');
+    pokeID.classList.add('pokeID', 'pokeApi');
+    pokeID.innerText = 'ID: ' + data.id;
     
     const pokeTypeApi = document.createElement('span');
     pokeTypeApi.classList.add('pokeTypeApi', 'pokeApi');
@@ -28,23 +34,24 @@ const fetchPokemon = () => {
     
     const pokeBasePowerApi = document.createElement('span');
     pokeBasePowerApi.classList.add('pokeBasePowerApi', 'pokeApi');
-    pokeBasePowerApi.innerText = 'Poder base: ' + data.stats[0].base_stat + ', Esfuerzo base: ' + data.stats[0].effort;
+    pokeBasePowerApi.innerText = 'Poder base: ' + data.stats[0].base_stat + ', esfuerzo base: ' + data.stats[0].effort;
     
-    const pokeMaxPowerApi = document.createElement('span');
-    pokeMaxPowerApi.classList.add('pokeMaxPowerApi', 'pokeApi');
-    pokeMaxPowerApi.innerText = 'Poder máximo: ' + data.stats[5].base_stat + ', Esfuerzo máximo: ' + data.stats[5].effort;
+    const pokeAbility = document.createElement('span');
+    pokeAbility.classList.add('pokeAbility', 'pokeApi');
+    pokeAbility.innerText = 'Habilidad: ' + data.abilities[0].ability.name;
     
     const pokeMove = document.createElement('span');
     pokeMove.classList.add('pokeMove', 'pokeApi');
     pokeMove.innerText = 'Movimiento: ' + data.moves[0].move.name;
     
-    li.append(pokeNameApi, pokeTypeApi, pokeBasePowerApi, pokeMaxPowerApi, pokeMove);
+    li.append(pokeNameApi, pokeID, pokeTypeApi, pokeBasePowerApi, pokeAbility, pokeMove);
     document.querySelector('.data').appendChild(li);
     
     const eraseInfo = document.getElementById('submit');
     eraseInfo.addEventListener('click', () => {
       document.querySelector('.data').innerHTML = "";
       pokeImage("./assets/images/pokeball.png");
+      document.getElementById('pokeName').value = "";
     })
     
   });
