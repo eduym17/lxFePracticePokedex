@@ -26,6 +26,23 @@ body {
   color: var(--color-white);
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .pokeImg {
   width: 150px;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+}
+
+li > span {
+  padding: 3px 0;
 }

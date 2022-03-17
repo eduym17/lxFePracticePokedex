@@ -10,11 +10,14 @@
   <body>
     <header></header>
     <main>
-      <h1>Pokedex LaunchX</h1>
+      <h1>Pokedex | LaunchX</h1>
       <label for="pokeName">Ingresa tu Pokemon</label>
       <input type="text" placeholder="Pokename" id="pokeName" name="pokeName">
       <img src="./assets/images/pokeball.png" alt="Pokeimage" class="pokeImg" id="pokeImg">
-      <button onclick="fetchPokemon()">Cambiar Pokemon</button>
+      <button onclick="fetchPokemon()" class="onClick" id="submit">Mostrar datos</button>
+      <div class="data">
+
+      </div>
     </main>
     <footer></footer>
     <script src="./logic.js"></script>
