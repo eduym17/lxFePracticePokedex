@@ -9,7 +9,7 @@
 
 - HTML, CSS, JS.
 
-## Live Demo (if available)
+## Live Demo
 
 [Live Demo Link](https://eduym17.github.io/LX-FE-practice-pokedex/)
 
